@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+    <h1 class="bg-info text-primary text-center rounded-pill" >Welcome to Winner</h1>
+    <h2 class="bg-primary text-light text-center">Merry Chistmas and Happy New Year 2023  </h2><br>
+    <hr width="800px" class="text-danger text-center ">
+    <p class="bg-info text-primary text-center rounded-4">
+        <img src= ../static/images/2023.png>
+
+    <br>  I miss my cocoa butter kisses, hope you smile when you listen <br>
+Ain't no competition, just competing for attention <br>
+And you like, "I'm not on no games" <br>
+Well, baby, I been peeping, and you ain't been the same
+    </p>
+    <p class="btn-success text-danger text-center"  >
+         <img src=../static/images/p.gif>
+       <b> I miss my cocoa butter kisses, hope you smile when you listen </b> <br>
+<i>Ain't no competition, just competing for attention </i><br>
+And you like, "I'm not on no games" <br>
+Well, baby, I been peeping, and you ain't been the same
+    </p>
+    <ul type="square">
+        <li class="list-group-item-info"> สิ่งที่เราสนใจ </li>
+        <li>แมว</li>
+    </ul>
+    <br>
+    <ol class="list-group-item-primary"> Favorites web site:
+        <li><a href="http://facebook.com" target="_blank">facebook.com</a> </li>
+        <li><a href="http://instagram.com" target="_blank">instagram.com</a></li>
+        <li><a href="http://kapook.com" target="_blank">kapook.com</a></li>
+        <li><a href="http://google.com">
+            <img src="{% static 'images/google.png' %}" width="100px" height="55px">
+        </a></li>
+    </ol>
+    <p class="text-center">
+<a href="/firstpage" class="btn btn-success">Go to first page</a>
+<a href="{% url 'secondpage' %}" class="btn bg-primary">Go to secong page</a>
+<a href="{% url 'thirdpage' %}" class="btn bg-danger">Go to third page</a>
+    </p>
+{% endblock %}

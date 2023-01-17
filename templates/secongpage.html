@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+
+<h1>This is Second Page</h1>
+<h2>Love Song</h2>
+<p>
+   <img src="../static/images/w.gif" width="250px" height="150px">
+
+    <img src="{% static 'images/k.gif'%} " width="250px" height="150px">
+    <br>
+</p>
+
+<p>       I miss my cocoa butter kisses, hope you smile when you listen
+    Ain't no competition, just competing for attention <br>
+    And you like, "I'm not on no games"
+    Well, baby, I been peeping, and you ain't been the same<br>
+    Like, who been on your mind? Who got your time?
+    Who you been vibing with? And why I can't make you mine?<br>
+    You used to be texting me, checking me, calling me your slime
+    And now you treat me like my worth less than a dime<br>
+    And if we paint a perfect picture, we can make it last forever
+    And you're the only one I want to wear my orange sweater<br>
+    I told you I am down for the worse or the better
+    But I keep sticking to you 'cause them four stupid letters<br>
+</p>
+<a href="/firstpage">Go To First Page</a>  <br>
+<a href="/thirdpage" >Go To Third Page</a>  <br>
+{% endblock %}

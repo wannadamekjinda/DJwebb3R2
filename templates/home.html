@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="mt-4 p-5 bg-secondary text-white rounded">
+        <h1>Welcome To Digitech Technology </h1>
+        <p><b>Digitech Technology and Server Co,.Ltd</b>
+            company for support </p>
+    </div>
+
+    <div class="text-center">
+    <div class="spinner-border text-muted"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-border text-success"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="{% static 'images/logo.png' %}" width="150px" height="150px" class="img-thumbnail">
+        </div>
+        <div class="col-lg-4 ">
+            <img src="{% static 'images/logo.png' %}" width="150px" height="150px" class="img-thumbnail">
+        </div>
+    </div>
+{% endblock %}

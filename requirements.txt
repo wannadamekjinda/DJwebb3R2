@@ -1,0 +1,5 @@
+asgiref==3.5.2
+Django==4.1.4
+django-fontawesome-5==1.0.18
+sqlparse==0.4.3
+tzdata==2022.7

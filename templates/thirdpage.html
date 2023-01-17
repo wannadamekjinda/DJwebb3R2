@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+{% block content %}
+<h1 align="center"> My Grade Infromation</h1>
+    <table class="table table-danger table-striped table-hover" >
+    <tr>
+        <th>Subject Id</th>
+        <th>Subject name</th>
+        <th>Credit</th>
+        <th>Grade</th>
+    </tr>
+        <tr>
+        <td>34-20001</td>
+        <td>Programming 1</td>
+        <td>3</td>
+        <td>A</td>
+        </tr>
+
+        <tr>
+        <td>34-20002</td>
+        <td>Digital Business</td>
+        <td>3</td>
+        <td>D</td>
+        </tr>
+
+         <tr>
+        <td>34-20003</td>
+        <td>Database</td>
+        <td>2</td>
+        <td>C</td>
+        </tr>
+</table>
+<a href="/firstpage" class="btn btn-success">Go To First Page</a>
+<a href="/secondpage" class="btn btn-info">Go To Second Page</a> <br>
+<br> <button class="btn btn-success">TEST</button>
+{% endblock %}
