@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1></h1>
+    <table>
+    <tr>
+        <th>รหัสสินค้า</th><th>ชื่อ</th><th>ยี่ห้อ</th>
+        <th>ราคาต่อหน่วย</th><th>คงเหลือ</th><th>ประเภท</th>
+        <th>จัดการ
+            <a href="{% url 'createProduct' %}"> New </a>
+        </th>
+    </tr>
+
+    {% for product in products %}
+        <tr>
+        <td>{{ product.pid }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.brand }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.net }}</td>
+        <td>{{ product.category.name }}</td>
+        <td>
+            <a href="{% url 'retrieveOneProduct' product.pid %}"></a>
+            <a href="{% url 'updateProduct' product.pid %}"></a>
+{#            <a href="{% url 'deleteProduceOk' product.pid %}" class="text-danger"  #}
+{#               onclick="return confirm('โปรดยืนยัน' {{ product.pid }} {{ product.pid }})"></a>#}
+{#            #}
+            <a href="{% url 'deleteProduce' product.pid %}" class="text-danger"
+               onclick="return confirm('โปรดยืนยัน' {{ product.pid }} {{ product.pid }})"></a>
+        </td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br><br>
+
+    <div class="col col-6 text-lg-center">
+            <a href="{% url 'home' %}" class="btn btn-primary ">Home</a>
+    </div>
+
+    <div class="col col-6 text-lg-center">
+            <a href="{% url 'updateProduct' %}" class="btn btn-primary ">Update</a>
+    </div>
+
+{% endblock %}

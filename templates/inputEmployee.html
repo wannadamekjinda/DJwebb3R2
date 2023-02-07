@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h2 class="text-success text-center text-bg-light">Add New Employee </h2>
+    <table>
+    <form  method="post" class="form form-control">
+        {% csrf_token %}
+        <tr>
+            <td>Employee Id </td>
+            <td>
+                <input type="text" name="id" size="15" maxlength="13" required="required"
+                       placeholder="ป้อนรหัสพนักงานที่นี่">
+            </td>
+        </tr>
+
+         <tr>
+            <td>Name </td>
+            <td>
+                <input type="text" name="name" size="35" maxlength="30" required="required"
+                       placeholder="ป้อนชื่อพนักงานที่นี่">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Surname </td>
+            <td>
+                <input type="text" name="surname" size="35" maxlength="30" required="required"
+                       placeholder="ป้อนนามสกลุพนักงานที่นี่">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Division </td>
+            <td>
+                <select name="division">
+                    <option value="Digital Development" >Digital Development</option>
+                    <option value="R&D" selected>Research and Development</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="HR">Human Resource</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Status </td>
+            <td>
+                <input type="radio" name="status" value="Programmer" >Programmer <br>
+                <input type="radio" name="status" value="Staff">Staff <br>
+                <input type="radio" name="status" value="Admin" checked>Admin<br>
+                <input type="radio" name="status" value="Manager">Manager<br>
+                <input type="radio" name="status" value="Accounting">Accounting<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Salary </td>
+            <td>
+                <input type="number" name="salary" size="15" maxlength="10" required="required" min="5000" max="500000"
+                       placeholder="ป้อนเงินเดือนพนักงานที่นี่" >
+            </td>
+         </tr>
+
+        <tr class="text-center">
+            <td colspan="5">
+            <input type="submit" value="Save" class="btn btn-success ">
+            <input type="reset" value="Reset" class="btn btn-danger ">
+            </td>
+        </tr>
+    </form>
+    </table>
+
+{% endblock %}

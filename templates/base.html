@@ -20,6 +20,10 @@
                 {% include 'menu.html' %}
             </div>
             <div class="col-lg-9 bg-light" >
+                {% for message in messages %}
+                    <div class="alert - {{ message.tags }} alert-dismissible" role="alert">
+                    <button type="button" class="btn-close" >
+                {% endfor %}
                {%  block content %}
 
                 {% endblock %}

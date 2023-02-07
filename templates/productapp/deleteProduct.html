@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Product Deleting</h1>
+    <h2>{{ product.pid  }} : {{ product.name }}</h2>
+    <table>
+    <tr>
+        <td>รหัสสินค้า</td> <td>{{ product.pid }}</td>
+    </tr>
+    <tr>
+        <td>ยี่ห้อ</td>
+        <td>{{ product.brand }}</td>
+    </tr>
+
+    <tr>
+        <td>ราคาต่อหน่วย</td>
+        <td>{{ product.price }}</td>
+    </tr>
+    <tr>
+        <td>คงเหลือ</td>
+        <td>{{ product.net }}</td>
+    </tr>
+    </table>
+    <br>
+    <div class="col col-6 text-lg-center">
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="pid" value="{{ product.pid }}">
+        <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('ยืนยันการลบสินค้ารายการนี้ ?')">
+        <input type="button" value="Cancel" onclick="history.back();" class="btn btn-secondary">
+    </form>
+    </div>
+{% endblock %}
